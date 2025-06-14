@@ -24,7 +24,18 @@ public class practise {
             return newNode;
         }
     }
+    public static void Pre(Node head) {
+        if(head == null) {
+            return;
+        }
+        System.out.println(head.data);
+        Pre(head.left);
+        Pre(head.right);
+    }
     public static void main(String[] args) {
         int[] arr = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
+        binaryTree tree = new binaryTree();
+        Node root = tree.createTree(arr);
+        Pre(root);
     }
 }
