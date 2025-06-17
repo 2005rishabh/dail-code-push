@@ -49,9 +49,23 @@ public class practise {
 
     public static int CountNodes(Node root) {
         if (root == null) return 0;
-        CountNodes(root.left);
-        CountNodes(root.right);
-        return 1 + CountNodes(root.left) + CountNodes(root.right);          
+        int leftN = CountNodes(root.left);
+        int rightN = CountNodes(root.right);
+        return 1 + leftN + rightN;          
+    }
+
+    public static int SumOfNodes(Node root) {
+        if (root == null) return 0;
+        int leftSum = SumOfNodes(root.left);
+        int rightSum = SumOfNodes(root.right);
+        return root.data + leftSum + rightSum;
+    }
+
+    public static int Height(Node root) {
+        if (root == null) return 0;
+        int leftHeight = Height(root.left);
+        int rightHeight = Height(root.right);
+        return Math.max(leftHeight, rightHeight) + 1;
     }
 
     public static void LevelOrder(Node root) {
@@ -90,6 +104,9 @@ public class practise {
         LevelOrder(root);
 
         System.out.println("Total Nodes: " + CountNodes(root));
-        CountNodes(root);
+
+        System.out.println("Sum of Nodes: " + SumOfNodes(root));
+
+        System.out.println("Height of Tree: " + Height(root));
     }
 }
