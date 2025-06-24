@@ -1,0 +1,15 @@
+What are graphs
+types of graphs
+how to implement
+traversing a graphs - bfs/dfs
+cycle detection
+topologial sort - kahns algo and dfs based
+flood fill
+Connected components
+shortest path algo - single/multi source
+dsu - disjoin union shortest
+minimum spanning tree - kruskal / prims
+hamilton path 
+graph coloring
+scc - strongly connected components
+network flow - ford fulkerson and edmonds karp
