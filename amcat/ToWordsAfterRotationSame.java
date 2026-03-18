@@ -1,3 +1,4 @@
+package amcat;
 import java.util.*;
 
 public class ToWordsAfterRotationSame {
